@@ -113,7 +113,7 @@ p { margin: 0 0 1em; }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 .nav-links a.active { color: var(--tan); }
 .nav-cta { padding: 12px 26px; font-size: .9rem; letter-spacing: .06em; gap: 10px; line-height: 1; margin-left: 8px; }
-.nav-links a.nav-cta { color: #fff; }
+.nav-links a.nav-cta { color: #fff; padding: 12px 26px 12px 22px; }
 .nav-links a.nav-cta::after { display: none; }
 .nav-links a.nav-cta:hover { background: var(--orange-dark); }
 .nav-cta svg { flex: none; }
