@@ -193,15 +193,26 @@
   if (form) {
     form.action = "https://formspree.io/f/" + S.formspreeId;
     // "#quote" links: land with the top of the form just below the fixed header
+    // (no element has id="quote", so the browser never jumps on its own and fights this)
+    const toForm = (behavior = "instant") => {
+      const headerH = document.querySelector("header")?.offsetHeight || 0;
+      let top = 0;
+      for (let el = form; el; el = el.offsetParent) top += el.offsetTop; // ignores the reveal transform
+      window.scrollTo({ top: top - headerH - 20, behavior });
+    };
     if (location.hash === "#quote") {
-      const toForm = () => {
-        const headerH = document.querySelector("header")?.offsetHeight || 0;
-        let top = 0;
-        for (let el = form; el; el = el.offsetParent) top += el.offsetTop; // ignores the reveal transform
-        window.scrollTo({ top: top - headerH - 20, behavior: "instant" });
-      };
-      window.addEventListener("load", () => setTimeout(toForm, 50));
+      history.scrollRestoration = "manual";
+      toForm();
+      window.addEventListener("load", () => { toForm(); setTimeout(toForm, 300); });
     }
+    // already on this page (e.g. the mobile "Free Quote" bar): scroll here instead of reloading
+    document.addEventListener("click", e => {
+      const a = e.target.closest('a[href$="#quote"]');
+      if (!a) return;
+      e.preventDefault();
+      history.replaceState(null, "", "#quote");
+      toForm("smooth");
+    });
     const status = form.querySelector(".form-status");
     form.addEventListener("submit", async e => {
       e.preventDefault();
