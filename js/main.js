@@ -234,4 +234,9 @@
       }
     });
   }
+
+  /* ---------- Job videos: respect "reduce motion" (show the poster, add controls) ---------- */
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("video[autoplay]").forEach(v => { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+  }
 })();

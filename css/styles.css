@@ -223,6 +223,15 @@ p { margin: 0 0 1em; }
 }
 .filter:hover { border-color: var(--orange); }
 .filter.active { background: var(--orange); border-color: var(--orange); color: #fff; }
+/* Job video on Our Work */
+.work-video { margin: 0 0 40px; position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--panel); }
+.work-video video { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.work-video figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 20px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff;
+  font-family: var(--head); text-transform: uppercase; letter-spacing: .08em; font-size: .95rem;
+}
+
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .gallery figure {
   margin: 0; position: relative; overflow: hidden; border-radius: 12px; cursor: zoom-in;
