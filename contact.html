@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | VT Land Services</title>
+  <meta name="description" content="Contact VT Land Services for a free estimate on land clearing, grading, tree work or landscaping. Call 980-421-3496.">
+  <meta name="theme-color" content="#0f0f0f">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Get In Touch</span>
+      <h1>Contact Us</h1>
+      <p>Call or text for the fastest response, or send a request and we'll get back to you with a free estimate.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="reveal">Let's Get Started</h2>
+        <p class="lead reveal">Tell us a little about your property and what you need done.</p>
+        <div class="contact-cards">
+          <a class="contact-card reveal" data-phone data-keep="1">
+            <span class="icon" data-icon="phone"></span>
+            <span><small>Call or Text</small><strong data-phone-text></strong></span>
+          </a>
+          <a class="contact-card reveal" data-email data-keep="1">
+            <span class="icon" data-icon="mail"></span>
+            <span><small>Email</small><strong data-email-text></strong></span>
+          </a>
+          <div class="contact-card reveal">
+            <span class="icon" data-icon="pin"></span>
+            <span><small>Service Area</small><strong data-area></strong></span>
+          </div>
+          <div class="contact-card reveal">
+            <span class="icon" data-icon="clock"></span>
+            <span><small>Hours</small><strong data-hours></strong></span>
+          </div>
+        </div>
+      </div>
+
+      <form id="quote-form" class="form reveal" method="POST">
+        <h3 id="quote">Request a Free Quote</h3>
+        <div class="form-row">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="field">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Land Clearing</option>
+              <option>Grading / Site Prep</option>
+              <option>Driveway</option>
+              <option>Tree Work</option>
+              <option>Landscaping</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="location">Job Location (town or address)</label><input id="location" name="location"></div>
+        <div class="field"><label for="message">Project Details</label><textarea id="message" name="message" placeholder="Acreage, what needs to be done, timeline…"></textarea></div>
+        <div class="hp"><label>Leave blank<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <input type="hidden" name="_subject" value="New quote request — VT Land Services website">
+        <button class="btn btn-primary" type="submit">Send Request</button>
+        <div class="form-status" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/photos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelector("[data-phone-text]").textContent = SITE.phone;
+    document.querySelector("[data-email-text]").textContent = SITE.email;
+  </script>
+</body>
+</html>

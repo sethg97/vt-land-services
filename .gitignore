@@ -1,0 +1,5 @@
+_to_delete/
+.claude/
+.DS_Store
+node_modules/
+*.zip
