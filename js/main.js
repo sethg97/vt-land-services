@@ -11,6 +11,9 @@
     pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-12a8 8 0 0 0-16 0c0 6 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg>',
     clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
     fb: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H7v4h2v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>',
+    shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>',
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg>',
     ig: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg>',
     quote: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>'
   };
@@ -63,6 +66,7 @@
         <div class="footer-brand">
           <img src="images/logo-wide.png" alt="${S.name} logo">
           <p>Land clearing, grading, tree work and landscaping across the North Carolina foothills.</p>
+          <p class="footer-trust">${ICON.shield} Fully insured · Free estimates</p>
           <div class="social">
             <a href="${S.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ICON.fb}</a>
             <a href="${S.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ICON.ig}</a>
@@ -111,6 +115,10 @@
   document.querySelectorAll("[data-area]").forEach(el => el.textContent = S.serviceArea);
   document.querySelectorAll("[data-hours]").forEach(el => el.textContent = S.hours);
   document.querySelectorAll("[data-icon]").forEach(el => el.innerHTML = ICON[el.dataset.icon] || "");
+
+  /* ---------- Trust badges (Fully Insured / Free Estimates / Locally Owned) in every [data-trust] ---------- */
+  const TRUST = `<span>${ICON.shield} Fully Insured</span><span>${ICON.check} Free Estimates</span><span>${ICON.home} Locally Owned</span>`;
+  document.querySelectorAll("[data-trust]").forEach(el => el.innerHTML = TRUST);
 
   /* ---------- Reveal on scroll ---------- */
   const io = new IntersectionObserver(entries => {

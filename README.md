@@ -23,7 +23,7 @@ Open the folder in VS Code, install the **Live Server** extension, right-click `
 3. **Photos**: his real job photos are in. The page backgrounds use `images/hero-grading.webp` (track loader on red clay); Our Work uses the hydroseeding video instead. The old drone shot is kept as `images/hero.webp`.
 4. **Reviews**: the section on `index.html` is hidden for now. Paste real reviews in, then delete `hidden` from its `<section>` tag to show it.
 5. **About text**: `about.html` has Reuben's own story (added Oct 2026).
-6. **Claims**: check that "Free estimates", the service list and the towns listed are all accurate. Add "Licensed & insured" only if it's true.
+6. **Claims**: check that "Free estimates", the service list and the towns listed are all accurate. "Fully Insured" is shown site-wide (confirmed Oct 2026). Add "Licensed" only if that's true too.
 7. **More photos**: services are shown as icon cards, so no service needs its own photo. Any new job photo just goes in the gallery (see below).
 8. **Before/after slider**: removed for now. Once he has a before and an after photo of the same job, ask Claude Code to add the before/after section back to the Home and Our Work pages.
 
