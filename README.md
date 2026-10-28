@@ -12,8 +12,8 @@ A static site: plain HTML, CSS and JavaScript. No database and no build step.
 The header, footer and mobile call bar are built once in `js/main.js` and shared by every page.
 
 ## Preview locally
-Open the folder in VS Code, install the **Live Server** extension, right-click `index.html`, and choose **Open with Live Server**.
-(You can also just double-click `index.html`.)
+In the VS Code terminal, run `python3 scripts/serve.py` and open http://localhost:8000.
+(Links use clean addresses like `/about`, which the Live Server extension and double-clicking a file don't understand.)
 
 ## Before going live: fill these in
 1. **`js/site-config.js`**: email, Facebook and Instagram URLs, Formspree ID, hours.

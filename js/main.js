@@ -19,12 +19,18 @@
   };
   window.ICON = ICON;
 
+  // Old links/bookmarks like /about.html or /index.html: show the clean address instead
+  if (/\.html$/.test(location.pathname)) {
+    const clean = location.pathname.replace(/(index)?\.html$/, "");
+    history.replaceState(null, "", clean + location.search + location.hash);
+  }
+
   const links = [
-    ["home", "index.html", "Home"],
-    ["services", "services.html", "What We Do"],
-    ["work", "work.html", "Our Work"],
-    ["about", "about.html", "Who We Are"],
-    ["contact", "contact.html", "Contact"]
+    ["home", "/", "Home"],
+    ["services", "/services", "What We Do"],
+    ["work", "/work", "Our Work"],
+    ["about", "/about", "Who We Are"],
+    ["contact", "/contact", "Contact"]
   ];
 
   /* ---------- Header ---------- */
@@ -32,7 +38,7 @@
   header.className = "site-header" + (page === "home" ? "" : " solid");
   header.innerHTML = `
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="${S.name} home">
+      <a class="brand" href="/" aria-label="${S.name} home">
         <img src="images/logo.png" alt="${S.name} logo" width="58" height="58">
         <span>VT <b>Land</b> Services</span>
       </a>
@@ -79,12 +85,12 @@
         <div>
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#clearing">Land Clearing</a></li>
-            <li><a href="services.html#grading">Grading &amp; Site Prep</a></li>
-            <li><a href="services.html#driveway">Driveways</a></li>
-            <li><a href="services.html#tree">Tree Work</a></li>
-            <li><a href="services.html#landscape">Landscaping</a></li>
-            <li><a href="services.html#hydroseeding">Hydroseeding</a></li>
+            <li><a href="/services#clearing">Land Clearing</a></li>
+            <li><a href="/services#grading">Grading &amp; Site Prep</a></li>
+            <li><a href="/services#driveway">Driveways</a></li>
+            <li><a href="/services#tree">Tree Work</a></li>
+            <li><a href="/services#landscape">Landscaping</a></li>
+            <li><a href="/services#hydroseeding">Hydroseeding</a></li>
           </ul>
         </div>
         <div>
@@ -106,7 +112,7 @@
 
   const bar = document.createElement("div");
   bar.className = "call-bar";
-  bar.innerHTML = `<a href="tel:${S.phoneLink}">${ICON.phone} Call Now</a><a href="contact.html#quote">${ICON.quote} Free Quote</a>`;
+  bar.innerHTML = `<a href="tel:${S.phoneLink}">${ICON.phone} Call Now</a><a href="/contact#quote">${ICON.quote} Free Quote</a>`;
   document.body.append(bar);
 
   /* ---------- Fill in [data-phone] / [data-email] placeholders ---------- */
