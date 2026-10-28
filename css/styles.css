@@ -139,7 +139,7 @@ p { margin: 0 0 1em; }
     linear-gradient(90deg, rgba(10,10,10,.85) 0%, rgba(10,10,10,.55) 55%, rgba(10,10,10,.25) 100%),
     linear-gradient(180deg, rgba(10,10,10,.4) 0%, rgba(10,10,10,0) 40%, rgba(10,10,10,.9) 100%);
 }
-.hero-inner { padding-top: 110px; padding-bottom: 80px; max-width: 820px; }
+.hero-inner { padding-top: 110px; padding-bottom: 150px; max-width: 820px; }
 .hero h1 span { color: var(--orange); }
 .hero p { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--text); max-width: 620px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
@@ -158,15 +158,6 @@ p { margin: 0 0 1em; }
 .form-trust svg { width: 18px; height: 18px; color: var(--orange); flex: none; }
 .footer-trust { display: flex; align-items: center; gap: 8px; color: var(--tan); }
 .footer-trust svg { width: 18px; height: 18px; color: var(--orange); flex: none; }
-.scroll-cue {
-  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
-  width: 26px; height: 42px; border: 2px solid var(--tan); border-radius: 20px; opacity: .7;
-}
-.scroll-cue::after {
-  content: ""; position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px;
-  background: var(--tan); border-radius: 2px; animation: cue 1.6s infinite;
-}
-@keyframes cue { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(14px); } }
 
 /* Page hero (inner pages) */
 .page-hero {
@@ -183,12 +174,17 @@ p { margin: 0 0 1em; }
 .page-hero p { max-width: 640px; color: var(--muted); font-size: 1.15rem; }
 
 /* ---------- Feature strip ---------- */
-.strip { background: var(--orange); color: #fff; }
-.strip .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-.strip div { padding: 24px 16px; text-align: center; font-family: var(--head); text-transform: uppercase; letter-spacing: .08em; }
-.strip div + div { border-left: 1px solid rgba(255,255,255,.25); }
-.strip strong { display: block; font-size: 1.15rem; }
-.strip small { opacity: .85; font-family: var(--body); text-transform: none; letter-spacing: 0; font-size: .9rem; }
+.strip { position: relative; z-index: 2; margin-top: -84px; }
+.strip .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.strip .container > div {
+  display: block; text-align: center; padding: 26px 18px 24px; border-radius: var(--radius);
+  background: rgba(24,24,24,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--line); border-top: 2px solid var(--orange); box-shadow: var(--shadow);
+}
+.strip-icon { width: 48px; height: 48px; margin: 0 auto 14px; border-radius: 12px; display: grid; place-items: center; background: rgba(226,103,42,.14); color: var(--orange); }
+.strip-icon svg { width: 26px; height: 26px; }
+.strip strong { display: block; font-family: var(--head); text-transform: uppercase; letter-spacing: .08em; font-size: 1.15rem; color: var(--tan); }
+.strip small { display: block; margin-top: 4px; color: var(--muted); font-size: .92rem; }
 
 /* ---------- Service cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
@@ -440,9 +436,10 @@ a.contact-card:hover { border-color: var(--orange); transform: translateX(4px); 
   .split.reverse .split-media { order: 0; }
   .split-media::after { display: none; }
   .split.story .split-media { position: relative; top: 0; }
-  .strip .container { grid-template-columns: repeat(2, 1fr); }
-  .strip div:nth-child(3) { border-left: 0; }
-  .strip div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.25); }
+  .strip { margin-top: -56px; }
+  .strip .container { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .strip .container > div { padding: 20px 12px 18px; }
+  .strip-icon { width: 42px; height: 42px; margin-bottom: 10px; }
 }
 
 @media (max-width: 640px) {
@@ -456,7 +453,6 @@ a.contact-card:hover { border-color: var(--orange); transform: translateX(4px); 
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .counties { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .scroll-cue { display: none; }
   .call-bar {
     display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
     box-shadow: 0 -6px 20px rgba(0,0,0,.5);
