@@ -10,6 +10,5 @@ window.PHOTOS = [
   { src: "images/jobs/slope-grading-hydroseed-01.webp", title: "Slope Grading & Hydroseeding", category: "grading",   featured: true },
   { src: "images/jobs/hydroseeding-01.webp",            title: "Hydroseeding",                 category: "landscape", featured: true },
   { src: "images/jobs/yard-grading-beds-01.webp",       title: "Yard Grading & Bed Install",   category: "landscape", featured: true },
-  { src: "images/jobs/gravel-driveway-01.webp",         title: "Gravel Driveway",              category: "grading",   featured: true },
-  { src: "images/jobs/slope-grading-hydroseed-02.webp", title: "Slope Stabilization",          category: "grading",   featured: true }
+  { src: "images/jobs/gravel-driveway-01.webp",         title: "Gravel Driveway",              category: "grading",   featured: true }
 ];
