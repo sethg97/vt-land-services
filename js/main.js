@@ -11,6 +11,7 @@
     pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-6 8-12a8 8 0 0 0-16 0c0 6 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg>',
     clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
     fb: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H7v4h2v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>',
+    ig: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg>',
     quote: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>'
   };
   window.ICON = ICON;
@@ -62,7 +63,10 @@
         <div class="footer-brand">
           <img src="images/logo-wide.png" alt="${S.name} logo">
           <p>Land clearing, grading, tree work and landscaping across the North Carolina foothills.</p>
-          <div class="social"><a href="${S.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ICON.fb}</a></div>
+          <div class="social">
+            <a href="${S.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ICON.fb}</a>
+            <a href="${S.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ICON.ig}</a>
+          </div>
         </div>
         <div>
           <h4>Explore</h4>

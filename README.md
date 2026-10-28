@@ -16,7 +16,7 @@ Open the folder in VS Code, install the **Live Server** extension, right-click `
 (You can also just double-click `index.html`.)
 
 ## Before going live: fill these in
-1. **`js/site-config.js`**: email, Facebook URL, Formspree ID, hours.
+1. **`js/site-config.js`**: email, Facebook and Instagram URLs, Formspree ID, hours.
 2. **Formspree** (sends quote requests to his email):
    - Sign up at formspree.io, create a form, and set it to email his address.
    - Copy the form ID (the part after `/f/`) into `formspreeId`.

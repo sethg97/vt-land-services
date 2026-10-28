@@ -6,7 +6,8 @@ window.SITE = {
   phone: "980-421-3496",
   phoneLink: "+19804213496",
   email: "vtlandservices@gmail.com",
-  facebook: "https://www.facebook.com/profile.php?id=61594260868867",      // TODO: paste his Facebook page URL
+  facebook: "https://www.facebook.com/profile.php?id=61594260868867",
+  instagram: "https://www.instagram.com/vtlandservices",
   formspreeId: "xdeegvwr",                    // from formspree.io
   serviceArea: "Lincoln, Burke, Catawba & Caldwell Counties, NC",
   hours: "Mon–Sat · 7am–6pm"                  // TODO: confirm hours
