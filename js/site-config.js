@@ -5,7 +5,7 @@ window.SITE = {
   name: "VT Land Services",
   phone: "980-421-3496",
   phoneLink: "+19804213496",
-  email: "seth.gabriel@gmail.com",          // TODO: replace with his real email
+  email: "vtlandservices@gmail.com",
   facebook: "https://www.facebook.com/profile.php?id=61594260868867",      // TODO: paste his Facebook page URL
   formspreeId: "xdeegvwr",                    // from formspree.io
   serviceArea: "Lincoln, Burke, Catawba & Caldwell Counties, NC",
