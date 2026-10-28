@@ -20,7 +20,7 @@ Open the folder in VS Code, install the **Live Server** extension, right-click `
 2. **Formspree** (sends quote requests to his email):
    - Sign up at formspree.io, create a form, and set it to email his address.
    - Copy the form ID (the part after `/f/`) into `formspreeId`.
-3. **Photos**: his real job photos are in. The hero is the drone shot of the slope. A wider or higher-resolution shot (about 1920px) would look even sharper.
+3. **Photos**: his real job photos are in. The page backgrounds use `images/hero-grading.webp` (track loader on red clay); Our Work uses the hydroseeding video instead. The old drone shot is kept as `images/hero.webp`.
 4. **Reviews**: the section on `index.html` is hidden for now. Paste real reviews in, then delete `hidden` from its `<section>` tag to show it.
 5. **About text**: on `about.html`, swap in his real story.
 6. **Claims**: check that "Free estimates", the service list and the towns listed are all accurate. Add "Licensed & insured" only if it's true.

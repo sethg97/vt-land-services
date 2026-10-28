@@ -128,7 +128,7 @@ p { margin: 0 0 1em; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative; min-height: 100svh; display: grid; align-items: center;
-  background: url("../images/hero.webp") center/cover no-repeat;
+  background: url("../images/hero-grading.webp") 65% 60%/cover no-repeat;
   isolation: isolate;
 }
 .hero::before {
@@ -156,7 +156,7 @@ p { margin: 0 0 1em; }
 /* Page hero (inner pages) */
 .page-hero {
   position: relative; padding: 170px 0 80px; isolation: isolate;
-  background: url("../images/hero.webp") center 70%/cover no-repeat;
+  background: url("../images/hero-grading.webp") center 62%/cover no-repeat;
 }
 .page-hero::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
