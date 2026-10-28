@@ -60,12 +60,18 @@
   document.body.prepend(header);
 
   const toggle = header.querySelector(".menu-toggle");
-  toggle.addEventListener("click", () => {
-    const open = document.body.classList.toggle("menu-open");
+  // Opening the phone menu also locks the page behind it (class on <html> so iOS stops scrolling too)
+  const setMenu = open => {
+    document.body.classList.toggle("menu-open", open);
+    document.documentElement.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", open);
-  });
+  };
+  toggle.addEventListener("click", () => setMenu(!document.body.classList.contains("menu-open")));
+  // tap the dimmed area outside the menu, or press Escape, to close it
+  header.addEventListener("click", e => { if (document.body.classList.contains("menu-open") && !e.target.closest(".nav-links, .menu-toggle")) setMenu(false); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
   header.querySelectorAll(".nav-links a").forEach(a =>
-    a.addEventListener("click", () => document.body.classList.remove("menu-open"))
+    a.addEventListener("click", () => setMenu(false))
   );
 
   const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 40);
