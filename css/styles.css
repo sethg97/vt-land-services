@@ -139,7 +139,7 @@ p { margin: 0 0 1em; }
     linear-gradient(90deg, rgba(10,10,10,.85) 0%, rgba(10,10,10,.55) 55%, rgba(10,10,10,.25) 100%),
     linear-gradient(180deg, rgba(10,10,10,.4) 0%, rgba(10,10,10,0) 40%, rgba(10,10,10,.9) 100%);
 }
-.hero-inner { padding-top: 110px; padding-bottom: 150px; max-width: 820px; }
+.hero-inner { padding-top: 110px; padding-bottom: 80px; max-width: 820px; }
 .hero h1 span { color: var(--orange); }
 .hero p { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--text); max-width: 620px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
@@ -173,19 +173,6 @@ p { margin: 0 0 1em; }
 .page-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; z-index: -2; }
 .page-hero p { max-width: 640px; color: var(--muted); font-size: 1.15rem; }
 
-/* ---------- Feature strip ---------- */
-.strip { position: relative; z-index: 2; margin-top: -84px; }
-.strip .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.strip .container > div {
-  display: block; text-align: center; padding: 26px 18px 24px; border-radius: var(--radius);
-  background: rgba(24,24,24,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--line); border-top: 2px solid var(--orange); box-shadow: var(--shadow);
-}
-.strip-icon { width: 48px; height: 48px; margin: 0 auto 14px; border-radius: 12px; display: grid; place-items: center; background: rgba(226,103,42,.14); color: var(--orange); }
-.strip-icon svg { width: 26px; height: 26px; }
-.strip strong { display: block; font-family: var(--head); text-transform: uppercase; letter-spacing: .08em; font-size: 1.15rem; color: var(--tan); }
-.strip small { display: block; margin-top: 4px; color: var(--muted); font-size: .92rem; }
-
 /* ---------- Service cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
 .card {
@@ -204,6 +191,12 @@ p { margin: 0 0 1em; }
   background: rgba(226,103,42,.14); color: var(--orange); margin-bottom: 14px;
 }
 .card .icon svg { width: 24px; height: 24px; }
+/* Home "What We Do": info cards (not links), orange top edge, centered */
+.cards.feature .card { border-top: 2px solid var(--orange); box-shadow: var(--shadow); text-align: center; }
+.cards.feature .card:hover { transform: none; border-color: var(--line); border-top-color: var(--orange); }
+.cards.feature .card-body { padding: 30px 22px 28px; }
+.cards.feature .icon { width: 52px; height: 52px; margin: 0 auto 16px; }
+.cards.feature .icon svg { width: 26px; height: 26px; }
 
 .services-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .service-card .ticks { margin-bottom: 0; }
@@ -436,10 +429,6 @@ a.contact-card:hover { border-color: var(--orange); transform: translateX(4px); 
   .split.reverse .split-media { order: 0; }
   .split-media::after { display: none; }
   .split.story .split-media { position: relative; top: 0; }
-  .strip { margin-top: -56px; }
-  .strip .container { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .strip .container > div { padding: 20px 12px 18px; }
-  .strip-icon { width: 42px; height: 42px; margin-bottom: 10px; }
 }
 
 @media (max-width: 640px) {
