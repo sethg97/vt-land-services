@@ -9,6 +9,6 @@ window.SITE = {
   facebook: "https://www.facebook.com/profile.php?id=61594260868867",
   instagram: "https://www.instagram.com/vtlandservices",
   formspreeId: "xdeegvwr",                    // from formspree.io
-  serviceArea: "Catawba, Lincoln, Iredell, Gaston, Caldwell & Burke Counties, NC",
+  serviceArea: "Catawba, Lincoln, Gaston, Iredell, Caldwell & Burke Counties, NC",
   hours: "Mon–Sat · 7am–6pm"                  // TODO: confirm hours
 };
