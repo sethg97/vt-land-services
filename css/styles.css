@@ -204,6 +204,12 @@ p { margin: 0 0 1em; }
 .split + .split { margin-top: clamp(60px, 9vw, 110px); }
 .split.reverse .split-media { order: 2; }
 .split-media { position: relative; }
+/* Who We Are: owner story */
+.split.story { align-items: start; }
+.split.story .split-media { position: sticky; top: 110px; }
+.story-goal { border-left: 3px solid var(--orange); padding-left: 16px; color: var(--tan); font-family: var(--head); text-transform: uppercase; letter-spacing: .04em; font-size: 1.1rem; line-height: 1.4; }
+.signature { font-family: var(--head); text-transform: uppercase; letter-spacing: .08em; font-size: 1.15rem; color: var(--tan); margin: 24px 0; }
+.signature small { display: block; font-family: var(--body); text-transform: none; letter-spacing: 0; font-size: .95rem; color: var(--muted); }
 .split-media img { border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 4/3; object-fit: cover; width: 100%; }
 .split-media::after {
   content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 2px solid var(--brown);
@@ -420,6 +426,7 @@ a.contact-card:hover { border-color: var(--orange); transform: translateX(4px); 
   .split, .split.reverse { grid-template-columns: 1fr; }
   .split.reverse .split-media { order: 0; }
   .split-media::after { display: none; }
+  .split.story .split-media { position: relative; top: 0; }
   .strip .container { grid-template-columns: repeat(2, 1fr); }
   .strip div:nth-child(3) { border-left: 0; }
   .strip div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.25); }
