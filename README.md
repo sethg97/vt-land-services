@@ -27,6 +27,9 @@ In the VS Code terminal, run `python3 scripts/serve.py` and open http://localhos
 7. **More photos**: services are shown as icon cards, so no service needs its own photo. Any new job photo just goes in the gallery (see below).
 8. **Before/after slider**: removed for now. Once he has a before and an after photo of the same job, ask Claude Code to add the before/after section back to the Home and Our Work pages.
 
+## Visitor stats
+Cloudflare Web Analytics (free, no cookies): log in at cloudflare.com → Analytics & Logs → Web Analytics. The snippet is at the bottom of each page.
+
 ## Adding job photos
 ```bash
 npm install sharp
