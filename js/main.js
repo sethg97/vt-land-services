@@ -95,7 +95,7 @@
       </div>
       <div class="footer-bottom">
         <span>© ${new Date().getFullYear()} ${S.name}. All rights reserved.</span>
-        <span>Serving Lincoln · Burke · Catawba · Caldwell</span>
+        <span>Serving Burke · Caldwell · Catawba · Gaston · Iredell · Lincoln</span>
       </div>
     </div>`;
   document.body.append(footer);
