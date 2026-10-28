@@ -46,6 +46,15 @@
       <ul class="nav-links">
         ${links.map(([k, href, label]) => `<li><a href="${href}" class="${k === page ? "active" : ""}">${label}</a></li>`).join("")}
         <li><a class="btn btn-primary nav-cta" href="tel:${S.phoneLink}">${ICON.phone} ${S.phone}</a></li>
+        <li class="nav-extra">
+          <a class="nav-extra-line" href="mailto:${S.email}">${ICON.mail} ${S.email}</a>
+          <p class="nav-extra-line">${ICON.clock} ${S.hours}</p>
+          <p class="nav-extra-line">${ICON.shield} Fully insured · Free estimates</p>
+          <div class="social">
+            <a href="${S.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ICON.fb}</a>
+            <a href="${S.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ICON.ig}</a>
+          </div>
+        </li>
       </ul>
     </div>`;
   document.body.prepend(header);

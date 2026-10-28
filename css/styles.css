@@ -119,6 +119,8 @@ p { margin: 0 0 1em; }
 .nav-links a.nav-cta svg { color: var(--orange); transition: color .2s; }
 .nav-links a.nav-cta:hover svg { color: #fff; }
 .nav-cta svg { flex: none; }
+/* Phone-menu extras (email, hours, socials): hidden on desktop */
+.nav-extra { display: none; }
 .menu-toggle {
   display: none; background: none; border: 0; padding: 8px; cursor: pointer; color: var(--tan);
 }
@@ -418,9 +420,19 @@ a.contact-card:hover { border-color: var(--orange); transform: translateX(4px); 
     gap: 6px; padding: 100px 30px 30px; background: var(--charcoal); transform: translateX(100%);
     transition: transform .35s ease; box-shadow: -20px 0 40px rgba(0,0,0,.5);
   }
-  .nav-links a { font-size: 1.25rem; padding: 10px 0; }
+  .nav-links { gap: 0; padding-bottom: 96px; overflow-y: auto; }
+  .nav-links a { font-size: 1.35rem; padding: 14px 0; }
+  .nav-links > li > a:not(.nav-cta):not(.nav-extra-line) { display: inline-block; }
   .nav-links li { width: 100%; }
-  .nav-links .nav-cta { margin-top: 18px; margin-left: 0; width: 100%; }
+  .nav-links li:not(.nav-extra):not(:nth-last-child(2)) { border-bottom: 1px solid var(--line); }
+  .nav-links .nav-cta { margin-top: 26px; margin-left: 0; width: 100%; padding-top: 15px; padding-bottom: 15px; font-size: 1rem; }
+  .nav-extra { display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 24px; border-top: 1px solid var(--line); }
+  .nav-links .nav-extra-line { display: flex; align-items: center; gap: 10px; margin: 0; padding: 0; font-family: var(--body); text-transform: none; letter-spacing: 0; font-size: .95rem; color: var(--muted); }
+  .nav-extra-line svg { width: 18px; height: 18px; color: var(--orange); flex: none; }
+  .nav-links .nav-extra-line::after { display: none; }
+  .nav-extra .social { margin-top: 4px; }
+  .nav-links .nav-extra .social a { padding: 0; font-size: 1rem; }
+  .nav-links .nav-extra .social a::after { display: none; }
   .menu-open .nav-links { transform: none; }
   .nav-links { height: 100vh; height: 100dvh; }
   .menu-open .site-header { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(15,15,15,.6); bottom: 0; }
