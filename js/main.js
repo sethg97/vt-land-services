@@ -119,7 +119,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© ${new Date().getFullYear()} ${S.name}. All rights reserved.</span>
+        <span>© ${new Date().getFullYear()} ${S.name} · Vista Terrains LLC. All rights reserved.</span>
         <span>Serving Catawba · Lincoln · Gaston · Iredell · Caldwell · Burke</span>
       </div>
     </div>`;
